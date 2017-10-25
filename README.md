@@ -1,4 +1,4 @@
-#BotDetection 
+# BotDetection 
 
 Neural Network trained to detect spammers on Reddit. Usage is as simple as: 
 
