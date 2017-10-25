@@ -9,22 +9,6 @@ r = praw.Reddit()
 
 blacklisted = ['askouija', 'test', 'freekarma4you'] #Subreddits where people engage in bot-like behavior
 
-def scrapeTrain():
-    all_users = list(set(open('/Users/Account1/Desktop/GitHubProjs/BotDetection/Train/humansnew.txt').read().split('\n')))
-    all_data = []
-
-    for user in all_users:
-        print(user)
-        try:
-            all_data.append([0] + list(User(user).__dict__.values()))
-        except Exception as e:
-            print(str(e))
-            continue 
-
-        with open('/Users/Account1/Desktop/GitHubProjs/BotDetection/data2.csv', 'w') as f:
-            writer = csv.writer(f)
-            writer.writerows(all_data) 
-
 
 def botInName(user):
     return 1 if 'bot' in str(user).lower() else 0.01
