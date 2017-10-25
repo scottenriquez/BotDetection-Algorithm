@@ -2,12 +2,11 @@
 
 Neural Network trained to detect spammers on Reddit. Usage is as simple as: 
 
-```from models import Classifier 
-
+```
+from models import Classifier 
 t = 0.9 #confidence threshold to return True  
 
 Algorithm = Classifier(t)
-
 print(Algorithm.is_a_bot('ThaChippa'))
 
 ``` 
