@@ -3,13 +3,7 @@ from nltk.corpus import stopwords
 
 np.random.seed(1)
 
-r = praw.Reddit(
-    client_id='QMGJWHgnQGIJNA',
-    client_secret='Vq5vDuub6xb_ik8jzOsm33Wpl5M',
-    password='1lafot12',
-    username='doggobotbotbot',
-    user_agent='Smiles all around!'
-    )
+r = praw.Reddit()
  
 
 
