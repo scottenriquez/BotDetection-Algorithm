@@ -1,4 +1,4 @@
-# BotDetection (Requires Python 3.6)
+# BotDetection (Requires Python 3.X)
 
 Neural Network trained to detect spammers on Reddit. Usage is as simple as: 
 

@@ -146,6 +146,7 @@ class User:
             self.is_repetitive = isRepetitive(usr, comment_list)
             self.spread = getSpread(usr, comment_list)
             self.average_time_beetween_comments = avTime(usr, comment_list)
+            self.data = [self.invalid_flag, self.bot_in_name, self.same_level_comments, self.keyword_present, self.unique_comments, self.few_posts, self.is_repetitive, self.spread, self.average_time_beetween_comments]
 
 
 class Classifier:
@@ -300,7 +301,7 @@ class Classifier:
     def is_a_bot(self, name):
         tObj = User(name)
         if tObj.invalid_flag: return None 
-        inpt_list = normalize_alone(list(tObj.__dict__.values())[1:])
+        inpt_list = normalize_alone(tObj.data[1:])
         inputs = np.array(inpt_list, ndmin=2).T 
         hidden_outputs = self.activation_function(np.dot(self.wih, inputs))
         result = self.activation_function(np.dot(self.who, hidden_outputs))[0][0]
