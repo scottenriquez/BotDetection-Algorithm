@@ -13,14 +13,6 @@ blacklisted = ['askouija', 'test', 'freekarma4you'] #Subreddits where people eng
 def botInName(user):
     return 1 if 'bot' in str(user).lower() else 0.01
 
-def getSpread(user, comlist):
-    subsList = []
-    for item in comlist:
-        if str(item.subreddit) not in subsList: 
-            subsList.append(str(item.subreddit))
-    # print(subsList)
-    return 0.01 if float(len(comlist))/float(len(subsList)) == 0 else float(len(comlist))/float(len(subsList))  
-
 
 def getSameLevels(user, comlist):
     # print(user)
